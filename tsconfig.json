@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "useDefineForClassFields": true,
+    "types": ["node"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strictPropertyInitialization": true,
+    "strictNullChecks": true,
+    "noImplicitOverride": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noUnusedLocals": false,
+    "noImplicitAny": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./src",
+    "paths": {
+      // "~pages": ["pages/EXPORT.ts"],
+      // "~pages-components": ["legacy/pages-components/EXPORT.ts"],
+      // "~hooks": ["legacy/hooks/EXPORT.ts"],
+      // "~graphql": ["legacy/graphql/EXPORT.ts"],
+      // "~fragments": ["legacy/graphql/fragments/EXPORT.ts"],
+      // "~layouts": ["legacy/components/layouts/EXPORT.ts"],
+      // "~elements": ["legacy/elements/EXPORT.ts"],
+      // "~utils": ["legacy/utils/EXPORT.ts"],
+
+      "#static/*": ["../static/*"]
+    }
+  },
+  "exclude": ["node_modules", "static"]
+}
