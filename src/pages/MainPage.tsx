@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import { Footer } from "widgets/Footer";
 import { Header } from "widgets/Header";
 
+
 export const MainPage: React.FC = (props) => {
   return (
     <div className={""}>

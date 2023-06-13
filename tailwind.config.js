@@ -248,20 +248,6 @@ module.exports = {
         fit: 'fit-content',
         screen: '100vh'
       },
-      zIndex: {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        10: 10,
-        11: 11,
-        1000: 1000,
-        1001: 1001,
-        1005: 1005
-      },
       transitionProperty: {
         'border-style': 'border-style'
       },
@@ -273,11 +259,6 @@ module.exports = {
         'ew-resize': 'ew-resize',
         'col-resize': 'col-resize',
         grabbing: 'grabbing'
-      },
-      opacity: {
-        light: '0.08',
-        medium: '0.32',
-        large: '0.64'
       }
     }
   }

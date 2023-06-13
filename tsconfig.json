@@ -23,7 +23,7 @@
     "jsx": "react-jsx",
     "baseUrl": "./src",
     "paths": {
-      // "~pages": ["pages/EXPORT.ts"],
+      "~shared": ["shared/index.ts"],
       // "~pages-components": ["legacy/pages-components/EXPORT.ts"],
       // "~hooks": ["legacy/hooks/EXPORT.ts"],
       // "~graphql": ["legacy/graphql/EXPORT.ts"],
@@ -32,7 +32,7 @@
       // "~elements": ["legacy/elements/EXPORT.ts"],
       // "~utils": ["legacy/utils/EXPORT.ts"],
 
-      "#static/*": ["../static/*"]
+      "#static/*": ["../static/*"],
     }
   },
   "exclude": ["node_modules", "static"]
