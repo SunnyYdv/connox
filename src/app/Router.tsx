@@ -1,9 +1,7 @@
-import { Cart } from 'pages/Cart'
-import { MainPage } from 'pages/MainPage'
+import { Cart, MainPage, ProductsListPage } from 'pages'
 import { FC, memo } from 'react'
 import { createRoutesFromElements, Navigate, Route, RouterProvider } from 'react-router'
 import { createBrowserRouter } from 'react-router-dom'
-import {ProductsListPage} from "../pages/ProductsListPage";
 
 
 const router = createBrowserRouter(

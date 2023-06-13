@@ -1,9 +1,19 @@
-import React, { ReactNode } from "react";
+import { Button } from "elements";
+import React, { ReactNode, useCallback } from "react";
+import { useNavigate } from "react-router";
 import { Footer } from "widgets/Footer";
 import { Header } from "widgets/Header";
 
 
 export const MainPage: React.FC = (props) => {
+  
+  const navigate = useNavigate();
+
+  const toProductsPage = useCallback(() => {
+    navigate("/products");
+  }, []);
+
+
   return (
     <div className={""}>
       <Header />
@@ -25,7 +35,7 @@ export const MainPage: React.FC = (props) => {
           <div className="text-center">
             <div className="text-gray-50"> FlowerPot Pendant light</div>
             <div className="text-32 mb-10"> &amp; Tradition</div>
-            <button>More item</button>
+            <Button variant={'black'} onClick={toProductsPage} >More item</Button>
           </div>
         </div>
         <div className="bg-main-chair bg-no-repeat object-cover rounded-20 p-40 w-full">
@@ -36,7 +46,7 @@ export const MainPage: React.FC = (props) => {
               All of the new products at a glance: Find the new additions to our
               assortment and magazine here.
             </div>
-            <button>Go to the catalogue</button>
+            <Button variant='white' onClick={toProductsPage}>Go to the catalogue</Button>
           </div>
         </div>
       </div>
@@ -58,7 +68,7 @@ export const MainPage: React.FC = (props) => {
           </p>
         </div>
 
-        <button>Go to the catalogue</button>
+        <Button variant='black' onClick={toProductsPage}>Go to the catalogue</Button>
       </div>
       <Footer/>
     </div>

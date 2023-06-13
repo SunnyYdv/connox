@@ -1,16 +1,24 @@
 import React, { ReactNode } from "react";
-import { products } from "shared";
+import { Product, products } from "shared";
 import { Icons } from "shared/icons";
 import { Header } from "widgets/Header";
 
 export const Cart: React.FC = (props) => {
+
+  const addToCart = (product: Product) => {
+    const cart: Product[] | [] = JSON.parse(localStorage.getItem("cart")!) as Product[] || [];
+    const newCart = JSON.stringify([...cart, product])
+    localStorage.setItem("cart", newCart);
+  };
+  const cartProducts = JSON.parse(localStorage.getItem("cart")!) as Product[] || [];
   return (
+  
     <div className={""}>
       <Header />
 
       <div className="max-w-900 w-full mx-auto py-40">
         <h2 className="text-32 mb-20">Your cart</h2>
-        {products.map((el) => {
+        {cartProducts?.map((el) => {
           return (
             <div className="flex mb-30 ">
               <div className="bg-gray-10 rounded-20 mr-20 p-20 w-300">
