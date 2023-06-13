@@ -2,13 +2,21 @@ import { Button } from "elements";
 import React from "react";
 import { Product, products } from "shared";
 import { Header } from "widgets/Header";
+export type CardItem = Product & { count: number };
 
 export const ProductsListPage: React.FC = (props) => {
-  
+
   const addToCart = (product: Product) => {
-    const cart: Product[] | [] = JSON.parse(localStorage.getItem("cart")!) as Product[] || [];
-    const newCart = JSON.stringify([...cart, product])
-    localStorage.setItem("cart", newCart);
+    const cart: { [key: string]: CardItem } =
+      (JSON.parse(localStorage.getItem("cart")!) as {}) || {};
+
+    if (product.id in cart) {
+      cart[product.id] = { ...product, count: cart[product.id].count + 1 };
+    } else {
+      cart[product.id] = { ...product, count: 1 };
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
   };
 
   const productsJSX = products.map((product) => {
