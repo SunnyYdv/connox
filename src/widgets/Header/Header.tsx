@@ -5,7 +5,7 @@ export const Header: React.FC = (props) => {
   return (
     <header
       className={
-        "flex items-center p-20 px-40 w-full mb-18 justify-between shadow-basic-1"
+        "flex items-center p-20 px-40 w-full justify-between shadow-interactive-2 "
       }
     >
       <span>Connox</span>

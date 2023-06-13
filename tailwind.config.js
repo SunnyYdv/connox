@@ -61,12 +61,15 @@ module.exports = {
         30: pxToRem(30),
         36: pxToRem(36),
         24: pxToRem(24),
-        40: pxToRem(40)
+        40: pxToRem(40),
+        80: pxToRem(80),
+        100: pxToRem(100),
       },
       lineHeight: {
         ...lineHeight,
         none: '1',
-        normal: '1.5'
+        normal: '1.5',
+        medium: '3',
       },
       backgroundPosition: theme => theme('positions'),
       objectPosition: theme => theme('positions'),
@@ -123,8 +126,8 @@ module.exports = {
         8: pxToRem(8)
       },
       backgroundImage: {
-        'home-level-up': 'url("/images/home-level-up-modal.png")',
-        'create-new-empty': 'url("/images/create-new-empty.png")'
+        'main-chair': 'url("/images/main-chair.jpg")',
+        'main-footer': 'url("/images/main-footer.jpg")'
       },
       maxWidth: {
         ...spacing,
@@ -143,9 +146,11 @@ module.exports = {
         800: pxToRem(800),
         880: pxToRem(880),
         900: pxToRem(900),
+        1200: pxToRem(1200),
         1400: pxToRem(1400),
         '25%': '25%',
         '50%': '50%',
+        '60%': '60%',
         '75%': '75%',
         '100%': '100%',
         screen: '100vw',
