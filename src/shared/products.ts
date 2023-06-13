@@ -49,7 +49,7 @@ export const products: Product[] = [
     manufacturer: "ferm Living",
     price: 378.00,
     description: "If you're looking for an elegant accent chair to add to your living room or bedroom, consider a tufted back and curved arms. This type of chair is ideal for a sophisticated decor style and can add a touch of luxury to any room. Look for an accent chair with high-quality upholstery and sturdy construction to ensure that it lasts for years to come. Whether you prefer a bold color or a more neutral shade, there are plenty of options to choose from when it comes to elegant accent chairs",
-    photo: "./../../static/images/chair-6",
+    photo: "./../../static/images/chair-6.png",
   },{
     id: '5b3e7c6f-8c2b-4e7a-179d-2d8c8f4f1f5c',
     name: "Thonet - S 43 cantilever",

@@ -1,3 +1,4 @@
+import { Cart } from 'pages/Cart'
 import { MainPage } from 'pages/MainPage'
 import { FC, memo } from 'react'
 import { createRoutesFromElements, Navigate, Route, RouterProvider } from 'react-router'
@@ -12,11 +13,11 @@ const router = createBrowserRouter(
 
 
       </Route> */}
-
-      {/* <Route element={<NotFoundPage />} path={'404'} /> */}
       <Route path={'/'} element={<MainPage/>} />
+      <Route path={'/cart'} element={<Cart/>} />
       <Route path={''} element={<Navigate replace to={'/'} />} />
-      <Route path={'*'} element={<Navigate replace to={'404'} />} />
+      <Route path={'*'} element={<Navigate replace to={'/'} />} />
+      {/* <Route path={'*'} element={<Navigate replace to={'404'} />} /> */}
 
     </Route>
   )
