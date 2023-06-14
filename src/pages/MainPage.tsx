@@ -38,7 +38,6 @@ export const MainPage: React.FC = (props) => {
           <div className="text-white">
             <div className="text-32 mb-15"> New at Connox</div>
             <div className="max-w-400 mb-20">
-              {" "}
               All of the new products at a glance: Find the new additions to our
               assortment and magazine here.
             </div>
