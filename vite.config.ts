@@ -8,7 +8,6 @@ export const configObj: UserConfigExport = {
     port: 3000
   },
   base: '/',
-  publicDir: './static',
   build: {
     outDir: './public',
     assetsDir: './static'
