@@ -1,16 +1,15 @@
 import { Button } from "~elements";
 import React, {useState} from "react";
-import {addToFavorites, Product, products} from "~shared";
-import { Header } from "widgets/Header";
-import TagOne from "../../elements/Icons/svg/TagOne";
-import TagTwo from "../../elements/Icons/svg/TagTwo";
-import TagThree from "../../elements/Icons/svg/TagThree";
-import TagFour from "../../elements/Icons/svg/TagFour";
+import { Product, products} from "~shared";
 import {useParams} from "react-router";
+import { Icons } from "shared/icons";
+
 export type CardItem = Product & { count: number };
 
 export const ProductPage: React.FC = (props) => {
+
     const [countProduct, setCountProduct ]=useState(1)
+
     const countProducts =(brush:string)=>{
        switch (brush){
            case 'minus':
@@ -21,13 +20,11 @@ export const ProductPage: React.FC = (props) => {
     }
 
 
-    let { id } = useParams();
+    const { id } = useParams();
 
     const cardToShow = products?.find((product)=> product?.id === id)
 
     return (
-    <main className={""}>
-      <Header />
       <div className={'ml-20 mt-50 mb-90'}>
           <div className={'flex gap-x-140'}>
               <div className={'max-w-600'}>
@@ -75,21 +72,21 @@ export const ProductPage: React.FC = (props) => {
                   <div className={'mt-60 flex items-center gap-x-20'}>
                       <div>
                           <div className={'flex gap-x-10  items-center'}>
-                             <TagOne/>
+                             <Icons.Price className="text-white" />
                               <div className={'text-gray-light text-18 max-w-175'}>Price incl. VAT, plus shipping</div>
                           </div>
                           <div className={'flex gap-x-10 mt-25 items-center'}>
-                              <TagTwo/>
+                              <Icons.Stock className="text-white"/>
                               <div className={'text-gray-light text-18  max-w-175'}>30 days return policy</div>
                           </div>
                       </div>
                       <div>
                           <div className={'flex gap-x-10  items-center'}>
-                            <TagThree/>
+                            <Icons.Return />
                               <div className={'text-gray-light text-18 max-w-175'}>Due in stock: 4-6 weeks</div>
                           </div>
                           <div className={'flex gap-x-10 mt-25 items-center'}>
-                              <TagFour/>
+                              <Icons.Discount/>
                               <div className={'text-gray-light text-18  max-w-175'}>Discount when buying from 4 pcs.</div>
                           </div>
                       </div>
@@ -97,6 +94,5 @@ export const ProductPage: React.FC = (props) => {
               </div>
           </div>
       </div>
-    </main>
   );
 };

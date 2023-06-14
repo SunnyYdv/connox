@@ -1,2 +1,2 @@
-export  { Favorites } from './Favorites'
+export  { FavoritesPage } from './FavoritesPage'
 

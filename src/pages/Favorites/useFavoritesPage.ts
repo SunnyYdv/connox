@@ -2,13 +2,13 @@
 import { useEffect, useState } from "react";
 import { addToCart, Product, removeFromFavorites } from "~shared";
 
-interface ICart {
+interface IFavoritesPage {
   favorites: Product[];
   addToCart(productId: Product): void;
   removeFromFavorites(productId: Product["id"]): void;
 }
 
-export const useFavorites = (): ICart => {
+export const useFavoritesPage = (): IFavoritesPage => {
   const [favorites, setFavorites] = useState<Product[]>([]);
 
   const handleRemoveFromFavorites = (productId: Product["id"]) => {

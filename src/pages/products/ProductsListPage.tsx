@@ -3,6 +3,7 @@ import React from "react";
 import { addToCart, addToFavorites, Product, products } from "shared";
 import { Header } from "widgets/Header";
 import {NavLink} from "react-router-dom";
+
 export type CardItem = Product & { count: number };
 
 export const ProductsListPage: React.FC = (props) => {
@@ -37,7 +38,6 @@ export const ProductsListPage: React.FC = (props) => {
 
   return (
     <main className={""}>
-      <Header />
       <div className={"mt-40 mb-100 mx-20"}>
         <div className={""}>
           <div className={"flex justify-between"}>

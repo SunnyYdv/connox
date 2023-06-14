@@ -20,7 +20,7 @@ export const Header: React.FC = (props) => {
   return (
     <header
       className={
-        "flex items-center p-20 px-40 w-full justify-between shadow-interactive-2 "
+        "flex items-center p-20 px-40 mobile:px-20 w-full justify-between shadow-interactive-2 "
       }
     >
       <span onClick={toMain} className='cursor-pointer'> Connox</span>

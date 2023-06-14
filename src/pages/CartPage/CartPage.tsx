@@ -1,24 +1,19 @@
 import React from "react";
 import { Icons } from "shared/icons";
-import { Footer } from "widgets/Footer";
-import { Header } from "widgets/Header";
-import { useCart } from "./useCart";
+import { useCartPage } from "./useCartPage";
 
 
-export const Cart: React.FC = () => {
-  const { cart, removeFromCart, changeProductCount, totalPrice} = useCart()
+export const CartPage: React.FC = () => {
+  const { cart, removeFromCart, changeProductCount, totalPrice} = useCartPage()
 
   return (
-    <div className={"flex flex-col grow min-h-screen"}>
-      <Header />
-
-      <div className="max-w-900 w-full mx-auto py-40">
+      <div className="max-w-900 w-full mx-auto py-40 px-20">
         <h2 className="text-32 mb-20">Your cart</h2>
         {cart?.map((product) => {
           return (
             <div className="flex mb-30 ">
-              <div className="bg-gray-10 rounded-20 mr-20 p-20 w-300">
-                <img src={product.photo} />
+              <div className="bg-gray-10 rounded-20 mr-20 p-20 w-300 max-h-160 flex items-center justify-center">
+                <img src={product.photo} className='max-h-150' />
               </div>
               <div className="flex flex-col w-full relative">
                 <Icons.Cross
@@ -65,7 +60,5 @@ export const Cart: React.FC = () => {
           </div>
         </div>
       </div>
-      <Footer/>
-    </div>
   );
 };

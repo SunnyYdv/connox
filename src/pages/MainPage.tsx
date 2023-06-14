@@ -1,8 +1,6 @@
 import { Button } from "elements";
 import React, { useCallback } from "react";
 import { useNavigate } from "react-router";
-import { Footer } from "widgets/Footer";
-import { Header } from "widgets/Header";
 
 
 export const MainPage: React.FC = (props) => {
@@ -16,16 +14,15 @@ export const MainPage: React.FC = (props) => {
 
   return (
     <div className={""}>
-      <Header />
-      <div className="bg-red-10 bg-main bg-no-repeat bg-center text-white relative text-100 p-40 h-710  flex flex-col mb-10">
-        <h1>New Arrival: spring/summer</h1>
-        <h1 className="text-right">23/24</h1>
-        <p className="text-16 max-w-300 mt-auto leading-medium">
+      <div className="bg-red-10 bg-main  bg-[length:400px_400px] mobile:bg-contain bg-no-repeat bg-center bg-bottom text-white relative p-40 py-100 mobile:p-20 flex flex-col mb-10">
+        <h1 className="text-100 mobile:text-36">New Arrival: spring/summer</h1>
+        <h1 className="text-right text-80 mobile:text-36 mobile:mb-40">23/24</h1>
+        <p className="text-16 max-w-300 mt-auto leading-medium mobile:leading-normal">
           These ideas, trends and products are brand-new! Be inspired by the
           latest in interior design right here!
         </p>
       </div>
-      <div className="flex space-x-10 w-full px-20 pb-10">
+      <div className="flex mobile:flex-col mobile:space-y-10 mobile:space-x-0 space-x-10 w-full px-20 pb-10">
         <div className="bg-[#E1DED9] rounded-20 p-40 w-full flex flex-col justify-center items-center">
           <img className="-mt-40 h-350 w-350" src="/images/lamps.png" />
           <div className="text-center">
@@ -45,8 +42,8 @@ export const MainPage: React.FC = (props) => {
           </div>
         </div>
       </div>
-      <div className="bg-main-footer bg-no-repeat bg-cover p-70 text-20 text-white">
-        <div className="max-w-75% mb-50 border-r space-y-30 pr-40 leading-medium">
+      <div className="bg-main-footer bg-no-repeat bg-cover p-70 mobile:p-20 text-20 mobile:text-16 text-white">
+        <div className="max-w-75% mobile:max-w-full mb-50 border-r space-y-30 pr-40 mobile:border-none mobile:pr-10 leading-medium mobile:leading-normal">
           <p>
             Whether you're looking for a comfortable office chair, a stylish
             dining chair, or a cozy armchair for your living room, we've got you
@@ -65,7 +62,6 @@ export const MainPage: React.FC = (props) => {
 
         <Button variant='black' onClick={toProductsPage}>Go to the catalogue</Button>
       </div>
-      <Footer/>
     </div>
   );
 };

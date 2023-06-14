@@ -1,15 +1,16 @@
-import { CardItem } from "pages/ProductsListPage";
+
+import { CardItem } from "pages";
 import { useEffect, useState } from "react";
 import { changeProductCount, Product, removeFromCart } from "~shared";
 
-interface ICart {
+interface ICartPage {
   cart: CardItem[];
   totalPrice: number;
   changeProductCount(productId: Product["id"], count: "plus" | "minus"): void;
   removeFromCart(productId: Product["id"]): void;
 }
 
-export const useCart = (): ICart => {
+export const useCartPage = (): ICartPage => {
   const [cart, setCart] = useState<CardItem[]>([]);
   const totalPrice = cart.reduce((acc, product) => {
     return acc + product.count * product.price;
