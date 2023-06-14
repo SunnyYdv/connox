@@ -14,8 +14,8 @@ export const Cross: FC<IconProps> = (props) => {
       {...rest}
     >
 
-<path d="M18 6L6 18" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
-<path d="M6 6L18 18" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M18 6L6 18" stroke="black" strokeLinecap="square" strokeLinejoin="round"/>
+<path d="M6 6L18 18" stroke="black" strokeLinecap="square" strokeLinejoin="round"/>
 </svg>
 
 

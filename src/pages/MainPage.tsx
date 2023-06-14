@@ -17,7 +17,7 @@ export const MainPage: React.FC = (props) => {
   return (
     <div className={""}>
       <Header />
-      <div className="bg-red text-white text-100 p-40 h-710  flex flex-col mb-10">
+      <div className="bg-red-10 text-white text-100 p-40 h-710  flex flex-col mb-10">
         <h1>New Arrival: spring/summer</h1>
         <h1 className="text-right">23/24</h1>
         <p className="text-16 max-w-300 mt-auto leading-medium">
