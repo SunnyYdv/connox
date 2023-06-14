@@ -1,16 +1,16 @@
 import { Button } from "~elements";
 import React, {useState} from "react";
-import { Product, products } from "~shared";
+import {addToFavorites, Product, products} from "~shared";
 import { Header } from "widgets/Header";
 import TagOne from "../../elements/Icons/svg/TagOne";
 import TagTwo from "../../elements/Icons/svg/TagTwo";
 import TagThree from "../../elements/Icons/svg/TagThree";
 import TagFour from "../../elements/Icons/svg/TagFour";
+import {useParams} from "react-router";
 export type CardItem = Product & { count: number };
 
 export const ProductPage: React.FC = (props) => {
     const [countProduct, setCountProduct ]=useState(1)
-
     const countProducts =(brush:string)=>{
        switch (brush){
            case 'minus':
@@ -21,13 +21,17 @@ export const ProductPage: React.FC = (props) => {
     }
 
 
-  return (
+    let { id } = useParams();
+
+    const cardToShow = products?.find((product)=> product?.id === id)
+
+    return (
     <main className={""}>
       <Header />
-      <div className={'ml-20 mt-50'}>
+      <div className={'ml-20 mt-50 mb-90'}>
           <div className={'flex gap-x-140'}>
               <div className={'max-w-600'}>
-                  <div>img</div>
+                  <img src={cardToShow?.photo} alt=""/>
                   <div className={'mt-50 text-24 border-b-red-10 border-b-4 w-65'}>About</div>
                   <div className={'text-18 text-gray-dark'}>As part of the Thonet range, the high-quality processed chair inspires with different material combinations of steel tube with a covering of tubular mesh with transparent, stable plastic support fabric, mesh fabric or upholstered and covered with leather or fabric.</div>
                   <div className={'mt-50 flex items-center gap-x-20 text-18'}>
@@ -50,15 +54,15 @@ export const ProductPage: React.FC = (props) => {
                   </div>
               </div>
 
-              <div>
+              <div className={'max-w-450'}>
                   <div className={'flex gap-x-5'}>
-                      <img src="./../../static/images/stars.png" alt="stars"/>
+                      <img src="/images/stars.png" alt="stars"/>
                       <div className={'text-18 text-gray-dark'}>5 reviews</div>
                   </div>
-                  <div className={'mt-30 text-40 text-gray-dark'}>title</div>
+                  <div className={'mt-30 text-40 text-gray-dark'}>{cardToShow?.name}</div>
                   <div className={'mt-5 text-18 text-[#B1B1B1]'}>Thonet</div>
-                  <div className={'mt-15 text-24 text-gray-dark'}>price</div>
-                  <div className={'mt-50 text-18 text-gray-dark mt-10'}>text text</div>
+                  <div className={'mt-15 text-24 text-gray-dark'}>€ {cardToShow?.price}</div>
+                  <div className={'mt-50 text-18 text-gray-dark mt-10'}>{cardToShow?.description}</div>
                   <div className={'flex items-center gap-x-10 mt-50'}>
                       <div className={'flex items-center gap-x-25 bg-red-10 py-7 px-50 text-white rounded-20'}>
                           <button disabled={countProduct==1} className={'cursor-pointer'} onClick={()=>countProducts('minus')}>-</button>

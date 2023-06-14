@@ -2,19 +2,23 @@ import { Button } from "elements";
 import React from "react";
 import { addToCart, addToFavorites, Product, products } from "shared";
 import { Header } from "widgets/Header";
+import {NavLink} from "react-router-dom";
 export type CardItem = Product & { count: number };
 
 export const ProductsListPage: React.FC = (props) => {
 
-  const productsJSX = products.map((product) => {
+  const productsJSX = products?.map((product) => {
     return (
       <div className={"w-1/3"}>
-        <img
-          className={
-            "mt-30 cursor-pointer bg-[#F1EDE6] rounded-20 hover:bg-[#f3dabc]"
-          }
-          src={product.photo}
-        />
+          <NavLink to={`/products/${product.id}`}>
+              <img
+                  className={
+                      "mt-30 cursor-pointer bg-[#F1EDE6] rounded-20 hover:bg-[#f3dabc]"
+                  }
+                  src={product.photo}
+              />
+          </NavLink>
+
         <div className={"pt-20"}>{product.name}</div>
         <div className={"py-10"}>{product.manufacturer}</div>
         <div>€ {product.price}</div>

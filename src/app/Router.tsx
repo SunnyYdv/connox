@@ -17,7 +17,7 @@ const router = createBrowserRouter(
       <Route path={'/'} element={<MainPage/>} />
       <Route path={'/cart'} element={<Cart/>} />
       <Route path={'/products'} element={<ProductsListPage/>} />
-        <Route path={'/product'} element={<ProductPage/>} />
+        <Route path={`/products/:id`} element={<ProductPage/>} />
         <Route path={''} element={<Navigate replace to={'/'} />} />
       <Route path={'*'} element={<Navigate replace to={'/'} />} />
       {/* <Route path={'*'} element={<Navigate replace to={'404'} />} /> */}
