@@ -86,8 +86,6 @@
     "dev": "vite",
     "prod": "vite serve",
     "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "lint": "eslint . --ext .ts,.tsx --fix",
     "schema": "node schema.js",
