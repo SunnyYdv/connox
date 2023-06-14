@@ -10,7 +10,7 @@ export const configObj: UserConfigExport = {
   base: '/',
   build: {
     outDir: './dist',
-    assetsDir: './static'
+    assetsDir: './dist/static'
   },
   plugins: [React(), TSConfigPaths()]
 }
