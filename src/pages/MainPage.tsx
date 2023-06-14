@@ -31,7 +31,7 @@ export const MainPage: React.FC = (props) => {
       </div>
       <div className="flex space-x-10 w-full px-20 pb-10">
         <div className="bg-[#E1DED9] rounded-20 p-40 w-full flex flex-col justify-center items-center">
-          <img className="-mt-40 h-350 w-350" src="./static/images/lamps.png" />
+          <img className="-mt-40 h-350 w-350" src="/images/lamps.png" />
           <div className="text-center">
             <div className="text-gray-50"> FlowerPot Pendant light</div>
             <div className="text-32 mb-10"> &amp; Tradition</div>
