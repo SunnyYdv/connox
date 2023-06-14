@@ -26,7 +26,7 @@ export const MainPage: React.FC = (props) => {
         </p>
         <img
           className="absolute-bottom h-500 w-500 "
-          src="/static/images/main.png"
+          src="/images/main.png"
         />
       </div>
       <div className="flex space-x-10 w-full px-20 pb-10">
