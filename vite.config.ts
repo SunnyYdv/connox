@@ -7,7 +7,7 @@ export const configObj: UserConfigExport = {
     https: true,
     port: 3000
   },
-  base: '/',
+  base: '/sunnyydv.github.io',
   publicDir: './static',
   build: {
     outDir: './public',
