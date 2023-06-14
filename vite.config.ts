@@ -7,7 +7,7 @@ export const configObj: UserConfigExport = {
     https: true,
     port: 3000
   },
-  base: '/sunnyydv.github.io/connox/',
+  base: '/',
   publicDir: './static',
   build: {
     outDir: './public',
