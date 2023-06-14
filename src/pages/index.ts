@@ -1,7 +1,7 @@
 export { CartPage } from './CartPage';
-export  { ProductsListPage } from './products/ProductsListPage';
-export  * from './products/ProductsListPage';
-export  { ProductPage } from './products/ProductPage';
+export  { ProductsPage } from './ProductsPage';
+export  * from './ProductsPage/ProductsPage';
+export  { ProductPage } from './ProductPage';
 export  { MainPage } from './MainPage';
-export  { FavoritesPage } from './Favorites';
+export  { FavoritesPage } from './FavoritesPage';
 

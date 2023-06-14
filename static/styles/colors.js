@@ -8,7 +8,7 @@ module.exports = {
   warning: "#FFAA01",
   success: "#00843F",
   page: "#F5F5F5",
-  red: { 10: "#AF4425", 20: "#6e2916", 30: "#42190d" },
+  red: {5: '#f3dabc', 10: "#AF4425", 20: "#6e2916", 30: "#42190d" },
   gray: {
     light: "#A8A8A8",
     10: "#F1EDE6",
