@@ -7,11 +7,11 @@ export const configObj: UserConfigExport = {
     https: true,
     port: 3000
   },
-  base: '/connox/',
+  base: '/',
   publicDir: './static',
   build: {
     outDir: './public',
-    assetsDir: './public'
+    assetsDir: './static'
   },
   plugins: [React(), TSConfigPaths()]
 }
