@@ -1,5 +1,6 @@
 import React from "react";
 import { Icons } from "shared/icons";
+import { Footer } from "widgets/Footer";
 import { Header } from "widgets/Header";
 import { useCart } from "./useCart";
 
@@ -8,7 +9,7 @@ export const Cart: React.FC = () => {
   const { cart, removeFromCart, changeProductCount, totalPrice} = useCart()
 
   return (
-    <div className={""}>
+    <div className={"flex flex-col grow min-h-screen"}>
       <Header />
 
       <div className="max-w-900 w-full mx-auto py-40">
@@ -29,15 +30,15 @@ export const Cart: React.FC = () => {
                 <div className="flex space-x-10 mt-10">
                   Count
                   <span
-                    className="bg-gray-10 rounded-l-full px-10 ml-15 cursor-poiner"
-                    onClick={() => product.count > 1 && changeProductCount(product.id)}
+                    className="bg-gray-10 rounded-l-full px-10 ml-15 cursor-pointer"
+                    onClick={() => product.count > 1 && changeProductCount(product.id, 'minus')}
                   >
                     -
                   </span>
                   <span className="">{product.count}</span>
                   <span
-                    className="bg-gray-10 rounded-r-full px-10 cursor-poiner"
-                    onClick={() => changeProductCount(product.id, true)}
+                    className="bg-gray-10 rounded-r-full px-10 cursor-pointer"
+                    onClick={() => changeProductCount(product.id, 'plus')}
                   >
                     +
                   </span>
@@ -64,6 +65,7 @@ export const Cart: React.FC = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

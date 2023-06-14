@@ -1,23 +1,10 @@
 import { Button } from "elements";
 import React from "react";
-import { Product, products } from "shared";
+import { addToCart, addToFavorites, Product, products } from "shared";
 import { Header } from "widgets/Header";
 export type CardItem = Product & { count: number };
 
 export const ProductsListPage: React.FC = (props) => {
-
-  const addToCart = (product: Product) => {
-    const cart: { [key: string]: CardItem } =
-      (JSON.parse(localStorage.getItem("cart")!) as {}) || {};
-
-    if (product.id in cart) {
-      cart[product.id] = { ...product, count: cart[product.id].count + 1 };
-    } else {
-      cart[product.id] = { ...product, count: 1 };
-    }
-
-    localStorage.setItem("cart", JSON.stringify(cart));
-  };
 
   const productsJSX = products.map((product) => {
     return (
@@ -39,7 +26,7 @@ export const ProductsListPage: React.FC = (props) => {
           {" "}
           Add to cart
         </Button>
-        <Button variant={"transparent"}> Add to favorite</Button>
+        <Button variant={"transparent"} onClick={()=> addToFavorites(product)}> Add to favorite</Button>
       </div>
     );
   });

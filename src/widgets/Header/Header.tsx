@@ -11,6 +11,10 @@ export const Header: React.FC = (props) => {
 
   const toMain = useCallback(() => {
     navigate("/");
+  }, []);  
+  
+  const toFavorites = useCallback(() => {
+    navigate("/favorites");
   }, []);
 
   return (
@@ -21,7 +25,7 @@ export const Header: React.FC = (props) => {
     >
       <span onClick={toMain} className='cursor-pointer'> Connox</span>
       <>
-        <Icons.Favorites className="ml-auto mr-10 cursor-pointer" />
+        <Icons.Favorites className="ml-auto mr-10 cursor-pointer" onClick={toFavorites} />
         <span onClick={toCart} className='cursor-pointer'>Cart</span>
       </>
     </header>

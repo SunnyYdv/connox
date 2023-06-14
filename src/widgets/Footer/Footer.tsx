@@ -5,7 +5,7 @@ export const Footer: React.FC = (props) => {
   return (
     <footer
       className={
-        "flex items-center p-20 px-40 w-full justify-between shadow-interactive-2 "
+        "flex items-center p-20 px-40 w-full justify-between shadow-interactive-2 mt-auto "
       }
     >
       <div className="flex items-center space-x-10">
