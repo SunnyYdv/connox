@@ -1,5 +1,5 @@
 import { Button } from "elements";
-import React, { ReactNode, useCallback } from "react";
+import React, { useCallback } from "react";
 import { useNavigate } from "react-router";
 import { Footer } from "widgets/Footer";
 import { Header } from "widgets/Header";
