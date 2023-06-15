@@ -10,6 +10,7 @@ export const FavoritesPage: React.FC = (props) => {
   return (
     <div className="max-w-900 w-full mx-auto py-40 px-20">
       <h2 className="text-32 mb-20">Your favorites</h2>
+     {!favorites.length && <h2 className="text-32 my-40 font-thin">Favorites is empty :&#40;</h2>}
       {favorites?.map((product) => {
         return (
           <div className="flex mb-30 max-h-160">

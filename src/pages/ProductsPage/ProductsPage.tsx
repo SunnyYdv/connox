@@ -1,5 +1,5 @@
 import { Button } from "elements";
-import React, { useCallback, useState } from "react";
+import React from "react";
 import { addToCart, addToFavorites, Product } from "shared";
 import { useNavigate } from "react-router-dom";
 import Select from 'react-select';
@@ -30,15 +30,15 @@ export const ProductsPage: React.FC = (props) => {
         />
       </div>
 
-      <div className={"grid grid-cols-3 mobile:grid-cols-2 gap-20 my-30 "}>
+      <div className={"grid grid-cols-3 mobile:grid-cols-2 gap-20 mobile:gap-10 my-30 "}>
         {products?.map((product) => {
           return (
-            <div className={"min-w-full h-full mb-20"}>
+            <div className={"mb-20"}>
               <div
                 onClick={() => toProductPage(product.id)}
-                className="cursor-pointer flex items-center justify-center h-400 mobile:h-250  bg-[#F1EDE6] transition rounded-20 hover:bg-red-5"
+                className="cursor-pointer flex items-center justify-center h-400 mobile:h-220  bg-[#F1EDE6] transition rounded-20 hover:bg-red-5"
               >
-                <img src={product.photo} className="h-350 mobile:h-200" />
+                <img src={product.photo} className="h-350 mobile:h-180" />
               </div>
 
               <div className={"pt-10"}>{product.name}</div>
