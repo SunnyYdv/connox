@@ -1,6 +1,6 @@
 import { Button } from "~elements";
 import React, {useState} from "react";
-import { Product, products} from "~shared";
+import {addToFavorites, Product, products} from "~shared";
 import {useParams} from "react-router";
 import { Icons } from "shared/icons";
 
@@ -66,7 +66,7 @@ export const ProductPage: React.FC = (props) => {
                           <div>{countProduct}</div>
                           <button className={'cursor-pointer'} onClick={()=>countProducts('plus')}>+</button>
                       </div>
-                      <Button children={'Add to favorite'} variant={'transparent'}/>
+                      <Button onClick={()=> addToFavorites(cardToShow)} children={'Add to favorite'} variant={'transparent'}/>
                   </div>
 
                   <div className={'mt-60 flex items-center gap-x-20'}>
