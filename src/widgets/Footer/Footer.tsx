@@ -14,7 +14,7 @@ export const Footer: React.FC = (props) => {
         <Icons.LinkedIn className="h-20 w-20"/>
         <Icons.Instagram className="h-20 w-20 block "/>
       </div>
-        <div className="uppercase ml-40 ">Privacy policies</div>
+        <div className="uppercase ml-5">Privacy policies</div>
     </footer>
   );
 };
