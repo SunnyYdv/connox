@@ -11,31 +11,46 @@ import {
   Navigate,
   Route,
   RouterProvider,
+  Routes,
 } from "react-router";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, BrowserRouter } from "react-router-dom";
 import { PageLayout } from "./layouts";
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route>
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <BrowserRouter>
+//       <Routes>
+//         <Route element={<PageLayout />}>
+//           <Route path={"/"} element={<MainPage />} />
+//           <Route path={"/cart"} element={<CartPage />} />
+//           <Route path={"/favorites"} element={<FavoritesPage />} />
+//           <Route path={"/products"} element={<ProductsPage />} />
 
+//           <Route path={"/product/:id"} element={<ProductPage />} />
+
+//           <Route path={""} element={<Navigate replace to={"/"} />} />
+//           <Route path={"*"} element={<Navigate replace to={"/"} />} />
+//         </Route>
+//       </Routes>
+//     </BrowserRouter>
+//   )
+// );
+const Router: FC = () => {
+  return (<BrowserRouter>
+    <Routes>
       <Route element={<PageLayout />}>
         <Route path={"/"} element={<MainPage />} />
         <Route path={"/cart"} element={<CartPage />} />
         <Route path={"/favorites"} element={<FavoritesPage />} />
-        <Route path={"/products"} element={<ProductsPage />}>
-        </Route>
-          <Route path={'/product/:id'} element={<ProductPage />} />
+        <Route path={"/products"} element={<ProductsPage />} />
+
+        <Route path={"/product/:id"} element={<ProductPage />} />
 
         <Route path={""} element={<Navigate replace to={"/"} />} />
         <Route path={"*"} element={<Navigate replace to={"/"} />} />
       </Route>
-
-    </Route>
-  )
-);
-const Router: FC = () => {
-  return <RouterProvider router={router} />;
+    </Routes>
+  </BrowserRouter>);
 };
 
 export default memo(Router);
