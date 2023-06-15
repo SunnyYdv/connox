@@ -9,6 +9,7 @@ export const CartPage: React.FC = () => {
   return (
       <div className="max-w-900 w-full mx-auto py-40 px-20">
         <h2 className="text-32 mb-20">Your cart</h2>
+        {!cart.length && <h2 className="text-32 my-40 font-thin">Cart is empty :&#40;</h2>}
         {cart?.map((product) => {
           return (
             <div className="flex mb-30 ">
