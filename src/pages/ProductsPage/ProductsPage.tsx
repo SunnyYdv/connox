@@ -1,5 +1,5 @@
 import { Button } from "elements";
-import React, { useCallback, useState } from "react";
+import React from "react";
 import { addToCart, addToFavorites, Product } from "shared";
 import { useNavigate } from "react-router-dom";
 import Select from 'react-select';
