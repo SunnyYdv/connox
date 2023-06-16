@@ -24,6 +24,7 @@ export const FavoritesPage: React.FC = (props) => {
               />
               <p>{product.name}</p>
               <p className="text-gray-50"> {product.manufacturer}</p>
+              <p className=""> &#8364; {product.price}</p>
               <Button
                 className="mt-auto px-20 w-fit"
                 variant="red"
