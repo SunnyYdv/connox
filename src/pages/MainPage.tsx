@@ -14,9 +14,9 @@ export const MainPage: React.FC = (props) => {
 
   return (
     <div className={""}>
-      <div className="bg-red-10 bg-main  bg-[length:400px_400px] mobile:bg-contain bg-no-repeat bg-center bg-bottom text-white relative p-40 py-100 mobile:p-20 flex flex-col mb-10">
-        <h1 className="text-100 mobile:text-36">New Arrival: spring/summer</h1>
-        <h1 className="text-right text-80 mobile:text-36 mobile:mb-40">23/24</h1>
+      <div className="bg-red-10 bg-main  bg-[length:400px_400px] mobile:bg-contain mobile:bg-[length:230px_200px] bg-no-repeat  bg-bottom text-white relative p-40 py-100 mobile:p-20 mobile:pb-30 flex flex-col mb-10">
+        <h1 className="text-100 mobile:text-40">New Arrival: spring/summer</h1>
+        <h1 className="text-right text-80 mobile:text-36 mobile:mb-70">23/24</h1>
         <p className="text-16 max-w-300 mt-auto leading-medium mobile:leading-normal">
           These ideas, trends and products are brand-new! Be inspired by the
           latest in interior design right here!

@@ -57,10 +57,10 @@ module.exports = {
       },
       fontSize: {
         ...fontSize,
+        24: pxToRem(24),
         28: pxToRem(28),
         30: pxToRem(30),
         36: pxToRem(36),
-        24: pxToRem(24),
         40: pxToRem(40),
         80: pxToRem(80),
         100: pxToRem(100),
