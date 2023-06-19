@@ -1,7 +1,6 @@
 import React from "react";
-import { Icons } from "shared/icons";
 import { useCartPage } from "./useCartPage";
-
+import { Icons, Image } from "~shared";
 
 export const CartPage: React.FC = () => {
   const { cart, removeFromCart, changeProductCount, totalPrice} = useCartPage()
@@ -14,7 +13,7 @@ export const CartPage: React.FC = () => {
           return (
             <div className="flex mb-30 ">
               <div className="bg-gray-10 rounded-20 mr-20 p-20 w-300 max-h-160 flex items-center justify-center">
-                <img src={product.photo} className='max-h-150' />
+                <Image src={product.photo} className='max-h-150' />
               </div>
               <div className="flex flex-col w-full relative">
                 <Icons.Cross

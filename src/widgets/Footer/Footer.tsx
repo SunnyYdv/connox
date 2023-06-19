@@ -1,7 +1,14 @@
-import React, { ReactNode } from "react";
+import React, { useCallback } from "react";
+import { useNavigate } from "react-router";
 import { Icons } from "shared/icons";
 
 export const Footer: React.FC = (props) => {
+  const navigate = useNavigate();
+
+  const toMain = useCallback(() => {
+    navigate("/");
+  }, []);
+
   return (
     <footer
       className={
@@ -9,12 +16,12 @@ export const Footer: React.FC = (props) => {
       }
     >
       <div className="flex items-center space-x-10">
-      <span className="mr-40">Connox</span>
-        <Icons.Youtube className="h-20 w-30"  />
-        <Icons.LinkedIn className="h-20 w-20"/>
-        <Icons.Instagram className="h-20 w-20 block "/>
+      <span className="mr-40 cursor-pointer" onClick={toMain}>Connox</span>
+        <Icons.Youtube className="h-20 w-30 cursor-pointer"  />
+        <Icons.LinkedIn className="h-20 w-20 cursor-pointer"/>
+        <Icons.Instagram className="h-20 w-20 block cursor-pointer"/>
       </div>
-        <div className="uppercase ml-5">Privacy policies</div>
+        <div className="uppercase ml-5 cursor-pointer">Privacy policies</div>
     </footer>
   );
 };

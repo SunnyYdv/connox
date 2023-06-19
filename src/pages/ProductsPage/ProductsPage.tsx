@@ -1,14 +1,13 @@
 import { Button } from "elements";
 import React from "react";
-import { addToCart, addToFavorites, Product } from "shared";
-import { useNavigate } from "react-router-dom";
+import { addToCart, Product, Image, Icons } from "shared";
 import Select from 'react-select';
 import { useProductsPage } from "./useProductsPage";
 
 export type CardItem = Product & { count: number };
 
 export const ProductsPage: React.FC = (props) => {
-  const {setFilter, selectStyles, filterOptions, products, toProductPage} = useProductsPage()
+  const {setFilter, selectStyles, filterOptions, products, toProductPage, favorites, handleAddToFavorites} = useProductsPage()
 
   return (
     <div className={"mt-40 mx-auto max-w-1200 px-20"}>
@@ -36,9 +35,10 @@ export const ProductsPage: React.FC = (props) => {
             <div className={"mb-20"}>
               <div
                 onClick={() => toProductPage(product.id)}
-                className="cursor-pointer flex items-center justify-center h-400 mobile:h-220  bg-[#F1EDE6] transition rounded-20 hover:bg-red-5"
+                className="cursor-pointer flex items-center justify-center h-400 mobile:h-220  bg-[#F1EDE6] transition rounded-20 hover:bg-red-5 relative"
               >
-                <img src={product.photo} className="h-350 mobile:h-180" />
+                <Image src={product.photo} className="h-350 mobile:h-180" />
+                {favorites && product.id in favorites ? <Icons.Favorites className="absolute top-10 right-10"/> : ''}
               </div>
 
               <div className={"pt-10"}>{product.name}</div>
@@ -54,7 +54,8 @@ export const ProductsPage: React.FC = (props) => {
                 </Button>
                 <Button
                   variant={"transparent"}
-                  onClick={() => addToFavorites(product)}
+                  onClick={() => handleAddToFavorites(product)}
+                  disabled={favorites && product.id in favorites}
                 >
                   Add to favorite
                 </Button>

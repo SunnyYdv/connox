@@ -3,6 +3,7 @@ import { Icons } from "shared/icons";
 import { Button } from "~elements";
 import { addToCart } from "~shared";
 import { useFavoritesPage } from "./useFavoritesPage";
+import { Image } from "~shared";
 
 export const FavoritesPage: React.FC = (props) => {
   const { favorites, removeFromFavorites } = useFavoritesPage();
@@ -15,7 +16,7 @@ export const FavoritesPage: React.FC = (props) => {
         return (
           <div className="flex mb-30 max-h-160">
             <div className="bg-gray-10 rounded-20 mr-20 p-20 w-300 flex items-center justify-center">
-              <img src={product.photo} className={"max-h-150"} />
+              <Image src={product.photo} className={"max-h-150"} />
             </div>
             <div className="flex flex-col w-full relative">
               <Icons.Cross
