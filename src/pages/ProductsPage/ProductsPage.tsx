@@ -1,16 +1,22 @@
 import { Button } from "elements";
 import React from "react";
 import { addToCart, addToFavorites, Product } from "shared";
-import { useNavigate } from "react-router-dom";
 import Select from 'react-select';
 import { useProductsPage } from "./useProductsPage";
+import {Watch} from "react-loader-spinner";
 
 export type CardItem = Product & { count: number };
 
 export const ProductsPage: React.FC = (props) => {
   const {setFilter, selectStyles, filterOptions, products, toProductPage} = useProductsPage()
 
-  return (
+    if (!products) return <Watch height="80"
+                                   width="80"
+                                   color="#AF4425"
+                                   wrapperClass={'absolute top-1/2 left-1/2'}/>;
+
+
+    return (
     <div className={"mt-40 mx-auto max-w-1200 px-20"}>
       <div className={"flex items-center gap-x-10"}>
         <div className={"text-18 text-gray-dark"}>Show by cost:</div>
