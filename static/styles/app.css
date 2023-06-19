@@ -3,48 +3,28 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'ABC Social';
+  font-family: 'FK Grotesk Neue Trial';
   font-weight: 200;
-  src: url('../fonts/ABCSocial-Light.woff2'), url('../fonts/ABCSocial-Light.woff'), url('../fonts/ABCSocial-Light.ttf');
+  src: url('../fonts/KrossNeueGrotesk-Light.woff2'), url('../fonts/KrossNeueGrotesk-Light.woff'), url('../fonts/KrossNeueGrotesk-Light.ttf');
 }
 
 @font-face {
-  font-family: 'ABC Social';
+  font-family: 'FK Grotesk Neue Trial';
   font-weight: 400;
-  src: url('../fonts/ABCSocial-Regular.woff2'), url('../fonts/ABCSocial-Regular.woff'),
-  url('../fonts/ABCSocial-Regular.ttf');
+  src: url('../fonts/KrossNeueGrotesk-Regular.woff2'), url('../fonts/KrossNeueGrotesk-Regular.woff'),
+  url('../fonts/KrossNeueGrotesk-Regular.ttf');
 }
 
-@font-face {
-  font-family: 'ABC Social';
-  font-weight: 400;
-  font-style: italic;
-  src: url('../fonts/ABCSocial-RegularItalic.woff2'), url('../fonts/ABCSocial-RegularItalic.woff'),
-  url('../fonts/ABCSocial-RegularItalic.ttf');
-}
 
 @font-face {
-  font-family: 'ABC Social';
-  font-weight: 500;
-  src: url('../fonts/ABCSocial-Medium.woff2'), url('../fonts/ABCSocial-Medium.woff'),
-  url('../fonts/ABCSocial-Medium.ttf');
-}
-
-@font-face {
-  font-family: 'ABC Social';
+  font-family: 'FK Grotesk Neue Trial';
   font-weight: 700;
-  src: url('../fonts/ABCSocial-Bold.woff2'), url('../fonts/ABCSocial-Bold.woff'), url('../fonts/ABCSocial-Bold.ttf');
-
-
-}@font-face {
-font-family: 'ABC Social';
-font-weight: 900;
-src: url('../fonts/ABCSocial-Black.woff2'), url('../fonts/ABCSocial-Black.woff'), url('../fonts/ABCSocial-Black.ttf');
+  src: url('../fonts/KrossNeueGrotesk-Bold.woff2'), url('../fonts/KrossNeueGrotesk-Bold.woff'), url('../fonts/KrossNeueGrotesk-Bold.ttf');
 }
 
 
 body {
-  font-family: 'ABC Social' !important;
+  font-family: 'FK Grotesk Neue Trial' !important;
 }
 .absolute-vertical-center {
     position: absolute;

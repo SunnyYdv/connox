@@ -63,6 +63,7 @@ module.exports = {
         36: pxToRem(36),
         40: pxToRem(40),
         80: pxToRem(80),
+        90: pxToRem(90),
         100: pxToRem(100),
       },
       lineHeight: {

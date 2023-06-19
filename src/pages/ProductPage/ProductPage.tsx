@@ -96,8 +96,8 @@ export const ProductPage: React.FC = (props) => {
           tubular mesh with transparent, stable plastic support fabric, mesh
           fabric or upholstered and covered with leather or fabric.
         </div>
-        <div className={"mt-50 flex items-center space-x-50 text-18"}>
-          <div className={"space-y-5"}>
+        <div className={"mt-50 flex items-start text-18"}>
+          <div className={"space-y-5 min-w-160"}>
             <div>Seat height</div>
             <div>Material</div>
             <div>Height</div>

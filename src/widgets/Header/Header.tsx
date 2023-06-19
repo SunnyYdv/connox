@@ -40,7 +40,7 @@ export const Header: React.FC = (props) => {
         </span>
         <span
           onClick={toFavorites}
-          className=" mx-30 cursor-pointer hover:scale-110 hover:text-red-10 font-medium  transition"
+          className=" mx-30 cursor-pointer hover:scale-110 hover:text-red-10 font-medium transition mobile:mx-15"
         >
           Favorites
         </span>

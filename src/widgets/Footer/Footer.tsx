@@ -21,7 +21,7 @@ export const Footer: React.FC = (props) => {
         <Icons.LinkedIn className="h-20 w-20 cursor-pointer"/>
         <Icons.Instagram className="h-20 w-20 block cursor-pointer"/>
       </div>
-        <div className="uppercase ml-5 cursor-pointer">Privacy policies</div>
+        <div className="uppercase ml-5 cursor-pointer mobile:text-12">Privacy policies</div>
     </footer>
   );
 };

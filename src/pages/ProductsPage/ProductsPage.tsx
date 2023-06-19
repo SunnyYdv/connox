@@ -27,7 +27,7 @@ export const ProductsPage: React.FC = (props) => {
         <div className={"text-18 text-gray-dark"}>Show by cost:</div>
         <Select
           onChange={setFilter}
-          className="my-react-select-container w-150"
+          className="my-react-select-container w-160"
           classNamePrefix="my-react-select"
           placeholder="Select filter"
           options={filterOptions}
