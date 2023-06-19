@@ -1,12 +1,24 @@
 import { Button } from "~elements";
 import React from "react";
-import { addToCart, Icons, Product, products, Image } from "~shared";
+import { addToCart, Product, Image } from "~shared";
+import { Icons } from "shared/icons";
+import { Watch } from "react-loader-spinner";
 import { useProductPage } from "./useProductPage";
+
+export type CardItem = Product & { count: number };
 
 export const ProductPage: React.FC = (props) => {
   const { favorites, handleAddToFavorites, product } = useProductPage();
 
-  if (!product) return <></>;
+  if (!product)
+    return (
+      <Watch
+        height="80"
+        width="80"
+        color="#AF4425"
+        wrapperClass={"absolute top-1/2 left-1/2"}
+      />
+    );
 
   return (
     <div className={"max-w-1200 mx-auto px-30 py-80 mobile:py-40"}>
