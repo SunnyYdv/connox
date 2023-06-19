@@ -1,22 +1,27 @@
 import { Button } from "elements";
 import React from "react";
 import { addToCart, addToFavorites, Product } from "shared";
-import Select from 'react-select';
+import Select from "react-select";
 import { useProductsPage } from "./useProductsPage";
-import {Watch} from "react-loader-spinner";
+import { Watch } from "react-loader-spinner";
 
 export type CardItem = Product & { count: number };
 
 export const ProductsPage: React.FC = (props) => {
-  const {setFilter, selectStyles, filterOptions, products, toProductPage} = useProductsPage()
+  const { setFilter, selectStyles, filterOptions, products, toProductPage } =
+    useProductsPage();
 
-    if (!products) return <Watch height="80"
-                                   width="80"
-                                   color="#AF4425"
-                                   wrapperClass={'absolute top-1/2 left-1/2'}/>;
-
-
+  if (!products)
     return (
+      <Watch
+        height="80"
+        width="80"
+        color="#AF4425"
+        wrapperClass={"absolute top-1/2 left-1/2"}
+      />
+    );
+
+  return (
     <div className={"mt-40 mx-auto max-w-1200 px-20"}>
       <div className={"flex items-center gap-x-10"}>
         <div className={"text-18 text-gray-dark"}>Show by cost:</div>
@@ -36,7 +41,11 @@ export const ProductsPage: React.FC = (props) => {
         />
       </div>
 
-      <div className={"grid grid-cols-3 mobile:grid-cols-2 gap-20 mobile:gap-10 my-30 "}>
+      <div
+        className={
+          "grid grid-cols-3 mobile:grid-cols-2 gap-20 mobile:gap-10 my-30 "
+        }
+      >
         {products?.map((product) => {
           return (
             <div className={"mb-20"}>
