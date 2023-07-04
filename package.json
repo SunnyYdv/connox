@@ -9,8 +9,6 @@
     "@headlessui/react": "1.7.3",
     "@lexical/react": "^0.8.1",
     "@loadable/component": "^5.15.0",
-    "@react-spring/web": "^9.7.2",
-    "@use-gesture/react": "^10.2.27",
     "actioncable-jwt": "^1.1.0",
     "agora-rtc-sdk-ng": "^4.10.0",
     "classnames": "^2.3.2",

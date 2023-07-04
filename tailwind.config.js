@@ -222,9 +222,6 @@ module.exports = {
         fit: 'fit-content',
         screen: '100vw'
       },
-      marginTop:{
-        350: pxToRem(350),
-      },
       height: {
         110: pxToRem(110),
         120: pxToRem(120),

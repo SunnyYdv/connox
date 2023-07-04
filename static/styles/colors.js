@@ -17,6 +17,3 @@ module.exports = {
     dark: "#292D32",
   },
 };
-
-
-

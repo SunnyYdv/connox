@@ -1,10 +1,12 @@
 import React, { forwardRef, memo, ReactNode } from 'react'
 import cls from "classnames";
 
-export type ButtonVariantType = 'transparent' | 'black'
+export type ButtonVariantType = 'red' | 'transparent' | 'black' | 'white'
 
-const buttonBlackVariant='border-2 border-black bg-black text-[#f2d49e] hover:bg-transparent hover:text-black  active:scale-90 transition rounded-30 py-5 px-15'
-const buttonTransparentVariant='active:bg-opacity-60 active:scale-90 transition text-black bg-transparent rounded-30 py-5 px-10 border-2 border-black'
+const buttonRedVariant='text-gray-10 bg-red-10 hover:bg-red-20 active:bg-red-30 transition rounded-20 active:scale-90 py-5 px-10'
+const buttonWhiteVariant='text-red-10 bg-white  hover:bg-red-20 hover:text-white active:bg-red-30 active:scale-90 transition rounded-20 py-5 px-15'
+const buttonTransparentVariant='hover:bg-red-10 hover:bg-opacity-40 active:bg-opacity-60 active:scale-90 transition   text-red-10 bg-transparent rounded-20 py-5 px-10 border-2 border-red-10'
+const buttonBlackVariant='text-white bg-black hover:bg-gray-90 transition active:scale-90 active:bg-black rounded-20 py-10 px-40 '
 const buttonDisabled='opacity-50 pointer-events-none'
 
 export type ButtonProps = {
@@ -16,8 +18,10 @@ export type ButtonProps = {
 const getButtonVariantClass = (variant: ButtonVariantType, className?:string, disabled = false ) => {
     return cls( className,
         {
+            [`${buttonRedVariant}`]: variant === 'red',
             [`${buttonTransparentVariant}`]: variant === 'transparent',
             [`${buttonBlackVariant}`]: variant === 'black',
+            [`${buttonWhiteVariant}`]: variant === 'white',
             [`${buttonDisabled}`]: disabled
         }
     )
@@ -25,7 +29,7 @@ const getButtonVariantClass = (variant: ButtonVariantType, className?:string, di
 
 export const Button = memo(
     forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
-      const { variant = 'black', children, className, disabled, ...rest } = props
+      const { variant = 'red', children, className, disabled, ...rest } = props
   
       return (
         <button ref={ref} className={getButtonVariantClass(variant, className, disabled )} {...rest}>

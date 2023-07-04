@@ -1,4 +1,10 @@
-import { MainPage } from "pages";
+import {
+  CartPage,
+  MainPage,
+  FavoritesPage,
+  ProductsPage,
+  ProductPage,
+} from "pages";
 import { FC, memo } from "react";
 import {
   createRoutesFromElements,
@@ -13,6 +19,10 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<PageLayout />}>
       <Route path={"/"} element={<MainPage />} />
+      <Route path={"/cart"} element={<CartPage />} />
+      <Route path={"/favorites"} element={<FavoritesPage />} />
+      <Route path={"/products"} element={<ProductsPage />} />
+      <Route path={"/product/:id"} element={<ProductPage />} />
 
       <Route path={""} element={<Navigate replace to={"/"} />} />
       <Route path={"*"} element={<Navigate replace to={"/"} />} />

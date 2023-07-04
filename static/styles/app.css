@@ -2,29 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-.rotate-text {
-  writing-mode: vertical-rl;
-}
-
 @font-face {
-  font-family: 'Inter';
+  font-family: 'FK Grotesk Neue Trial';
   font-weight: 200;
-  src: url('../fonts/Inter-Light.woff2'), url('../fonts/Inter-Light.woff'), url('../fonts/Inter-Light.ttf');
+  src: url('../fonts/KrossNeueGrotesk-Light.woff2'), url('../fonts/KrossNeueGrotesk-Light.woff'), url('../fonts/KrossNeueGrotesk-Light.ttf');
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: 'FK Grotesk Neue Trial';
   font-weight: 400;
-  src: url('../fonts/Inter-Regular.woff2'), url('../fonts/Inter-Regular.woff'),
-  url('../fonts/Inter-Regular.ttf');
+  src: url('../fonts/KrossNeueGrotesk-Regular.woff2'), url('../fonts/KrossNeueGrotesk-Regular.woff'),
+  url('../fonts/KrossNeueGrotesk-Regular.ttf');
 }
+
 
 @font-face {
-  font-family: 'Inter';
+  font-family: 'FK Grotesk Neue Trial';
   font-weight: 700;
-  src: url('../fonts/Inter-Bold.woff2'), url('../fonts/Inter-Bold.woff'), url('../fonts/Inter-Bold.ttf');
+  src: url('../fonts/KrossNeueGrotesk-Bold.woff2'), url('../fonts/KrossNeueGrotesk-Bold.woff'), url('../fonts/KrossNeueGrotesk-Bold.ttf');
 }
 
+
+body {
+  font-family: 'FK Grotesk Neue Trial' !important;
+}
 .absolute-vertical-center {
     position: absolute;
     top: 50%;
@@ -56,71 +57,34 @@
     transform: translate(-50%, -50%);
   }
 
-* {
-  font-family: 'Inter' !important;
-  padding: 0;
-  margin: 0;
-}
 
-.content{
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  background-color: transparent;
-}
-
-.behind{
-  width: 100vw;
-  height: 100vh;
-  filter: blur(5px);
-  position: relative;
-}
-
-.behind,
-#glasses::before {
-  background: url('./images/beer.jpg') 0 / cover fixed;
-  overflow: hidden;
-}
-
-#glasses::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  filter: blur(0px);
-}
-
-#glasses{
-  border-style: solid;
-  border-radius: 50%;
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  overflow: hidden;
-}
-
-.glasses {
-  animation-name: example;
-  animation-duration: 7s;
-  left: calc((100% / 2) - 300px);
-  bottom: calc((100% / 2) - 300px);
-  z-index: 1;
-  animation-iteration-count: infinite;
-  box-shadow:  0px 0px 1000px 1000px rgba(0, 0, 0, 0.2);
-}
-
-@keyframes example {
-  0%   { left: calc((100% / 2) - 300px); bottom: calc((100% / 2) - 300px)}
-  30%   { left:-50px; bottom: calc(100% - 450px)}
-  60%   { left:-50px; bottom: calc((100% / 2) - 450px)}
-  80%   { left:1000px; bottom: calc((100%  - 450px))}
-}
-
-.header-content {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
-}
+  @layer components {
+     .my-react-select-container {
+    } 
+     .my-react-select-container .my-react-select__control {
+      @apply bg-white  border-2 border-red-10 dark:border-red-10 hover:border-red-5 dark:hover:border-red-10;
+    }
+  
+    .my-react-select-container .my-react-select__control--is-focused {
+      @apply border-red-10 bg-red-5 hover:border-red-10 dark:border-red-10 dark:hover:border-red-10 shadow-none;
+    }
+  
+    .my-react-select-container .my-react-select__menu {
+      @apply   border-2 border-red-10 dark:border-red-10;
+    }
+  
+    .my-react-select-container .my-react-select__option {
+      @apply text-black dark:text-black  hover:bg-red-5  dark:hover:bg-red-5;
+    } 
+   
+  
+    .my-react-select-container .my-react-select__indicator-separator {
+      @apply bg-red-5;
+    }
+  
+    .my-react-select-container .my-react-select__input-container,
+    .my-react-select-container .my-react-select__placeholder,
+    .my-react-select-container .my-react-select__single-value {
+      @apply text-black dark:text-red-10 dark:border-red-10 dark:active:bg-red-10 ;
+    }
+  }
